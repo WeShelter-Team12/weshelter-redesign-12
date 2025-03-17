@@ -4,10 +4,8 @@
 
 <section class="hero-container">
   <article class="hero-text">
-    <div class="header-hero">
-      <h1>VI HAR BRUG FOR DIG!</h1>
-      <h2>GØR EN FORSKEL</h2>
-    </div>
+    <h1>VI HAR BRUG FOR DIG!</h1>
+    <h2>GØR EN FORSKEL</h2>
   </article>
 
   <article class="heroimg-container">
@@ -152,26 +150,31 @@
     }
 
     .arrowsimg {
+      margin-top: 5px;
       width: 100px;
     }
   }
 
   @media (min-width: 801px) and (max-width: 1072px) {
     h1 {
-      font-size: 4rem;
+      font-size: 3.5rem;
     }
 
     h2 {
       font-size: 3rem;
     }
 
+    .hero-container {
+      flex-direction: column;
+    }
+
     .heroimg {
       width: 500px;
-      top: 40px;
-      right: 10px;
+      top: 50px;
     }
+
     button {
-      padding: 30px 50px;
+      padding: 25px 35px;
       font-size: 1rem;
     }
   }
@@ -185,6 +188,16 @@
       margin: 0 auto;
     }
 
+    button {
+      padding: 25px 35px;
+      font-size: 1rem;
+      margin-top: 5px;
+    }
+
+    .arrowsimg {
+      margin-top: 10px;
+    }
+
     .heroimg-container {
       margin: 0 auto;
       align-items: center;
@@ -192,7 +205,7 @@
     }
 
     h1 {
-      font-size: 4rem;
+      font-size: 3.5rem;
     }
 
     h2 {
@@ -203,8 +216,8 @@
       position: relative;
       margin-top: 50px;
       margin: 0 auto;
-      top: 20px;
-      font-size: 1.8rem;
+      top: 0px;
+
       text-align: center;
     }
 
