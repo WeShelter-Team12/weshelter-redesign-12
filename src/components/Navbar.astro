@@ -1,0 +1,54 @@
+---
+const { activePage } = Astro.props;
+---
+
+<nav class="navbar">
+  <div class="logo">
+    <a href="/">WeShelter</a>
+  </div>
+  <ul class="nav-links">
+    <li class={activePage === "bliv-frivillig" ? "active" : ""}>
+      <a href="/bliv-frivillig">BLIV FRIVILLIG</a>
+    </li>
+    <li class={activePage === "stoet" ? "active" : ""}>
+      <a href="/stoet">STØT</a>
+    </li>
+    <li class={activePage === "om" ? "active" : ""}>
+      <a href="/om">OM</a>
+    </li>
+  </ul>
+</nav>
+
+<style>
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    font-family: "Mulish", sans-serif;
+    font-weight: 400;
+
+    border-bottom: 1px solid #ddd;
+  }
+
+  .logo a {
+    font-size: 2rem;
+    color: white;
+    text-decoration: none;
+  }
+
+  .nav-links {
+    list-style: none;
+    font-size: 1.2rem;
+    display: flex;
+    gap: 50px;
+  }
+
+  .nav-links li a {
+    text-decoration: none;
+    color: white;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s;
+  }
+</style>
