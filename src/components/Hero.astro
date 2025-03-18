@@ -33,12 +33,15 @@
     <div class="ikon-container">
       <div class="haender-item">
         <img class="ikon" src="/haenderikon.webp" alt="Haender med Hjerte" />
+        <p>Vi skaber varige forandringer med åbenhed og ærlighed. Hos WeShelter kan du stole på, at din indsats gør en reel forskel for dem, der har mest brug for det.</p>
       </div>
       <div class="personer-item">
         <img class="ikon" src="/personerikon.webp" alt="Personer" />
+        <p>Ingen skal stå alene. Vi bygger stærke fællesskaber, hvor frivillige og udsatte mødes i øjenhøjde – sammen skaber vi tryghed, støtte og nye muligheder.</p>
       </div>
       <div class="haender2-item">
         <img class="ikon" src="/haender2ikon.webp" alt="Haender med Hjerte" />
+        <p>Små handlinger kan ændre liv. Uanset om du giver din tid, dine kompetencer eller din støtte, er din indsats med til at skabe håb og forandring for hjemløse og udsatte.</p>
       </div>
     </div>
   </article>
@@ -48,28 +51,49 @@
   .ikon-container {
     display: flex;
     justify-content: space-around;
-    padding: 15px 20px;
-    position: relative;
-    top: 30px;
+    align-items: center;
+  }
+
+  .ikon-container div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1; /* Sørger for at hvert ikon fylder lige meget plads */
   }
 
   .ikon {
-    max-width: 200px;
-    width: 95%;
+    max-width: 40%;
     height: auto;
-  }
-
-  .personer-item {
-    margin: 0 auto;
+    object-fit: contain; /* Sørger for, at billedet ikke bliver beskåret */
+    margin-top: 50px;
   }
 
   .haender-item {
-    padding-left: clamp(10px, 6vw, 100px);
+    display: flex;
+    flex-direction: column;
   }
 
   .haender2-item {
-    padding-right: clamp(10px, 6vw, 100px);
+    display: flex;
+    flex-direction: column;
   }
+
+  p {
+    max-width: 70%;
+    height: auto;
+    object-fit: contain; /* Sørger for, at billedet ikke bliver beskåret */
+    font-family: "Mulish", sans-serif;
+    font-weight: 400;
+    margin-top: 50px;
+    letter-spacing: 1.08px;
+    line-height: 30px;
+  }
+
+  .personer-item {
+    display: flex;
+    flex-direction: column;
+  }
+
   .sideto {
     background-color: #fffcf6;
     min-height: 100vh;
@@ -113,7 +137,9 @@
   .lines-container img {
     display: inline-block; /* Sørger for, at billedet kun fylder sit eget indhold */
     width: auto; /* Undgår at billedet strækker sig */
-    max-width: 95%; /* Sørger for, at det ikke bliver større end sit indhold */
+    max-width: 100%; /* Sørger for, at det ikke bliver større end sit indhold */
+    padding-left: 20px;
+    padding-right: 20px;
     height: auto; /* Bevarer proportioner */
     align-self: center;
   }
@@ -260,6 +286,10 @@
       font-size: 1.5rem;
     }
 
+    h4 {
+      text-align: center;
+    }
+
     button {
       padding: 30px 50px;
       font-size: 1rem;
@@ -269,6 +299,53 @@
     .arrowsimg {
       margin-top: 5px;
       width: 100px;
+    }
+    .ikon-container {
+      display: flex;
+      flex-direction: column;
+      padding: 20px;
+    }
+
+    .haender2-item {
+      flex-direction: row;
+      gap: 100px;
+    }
+
+    .haender-item {
+      flex-direction: row;
+      gap: 100px;
+    }
+
+    .personer-item {
+      flex-direction: row-reverse;
+      gap: 100px;
+    }
+
+    p {
+      max-width: 250px;
+    }
+    .ikon {
+      width: 30%;
+    }
+
+    .haender2-item {
+      flex-direction: row;
+      gap: 20px;
+    }
+
+    .haender-item {
+      flex-direction: row;
+      gap: 20px;
+    }
+
+    .personer-item {
+      flex-direction: row-reverse;
+      gap: 20px;
+    }
+
+    h4 {
+      border-bottom: solid 1px #1f325a;
+      padding-bottom: 50px;
     }
   }
 
@@ -312,6 +389,33 @@
       display: none;
     }
 
+    .haender2-item {
+      flex-direction: row;
+      gap: 50px;
+    }
+
+    .haender-item {
+      flex-direction: row;
+      gap: 50px;
+    }
+
+    .personer-item {
+      flex-direction: row-reverse;
+      gap: 50px;
+    }
+
+    p {
+      max-width: 300px;
+    }
+    .ikon {
+      width: 30%;
+    }
+
+    .ikon-container {
+      display: flex;
+      flex-direction: column;
+    }
+
     button {
       padding: 30px 50px;
       font-size: 1rem;
@@ -345,6 +449,10 @@
       text-align: center;
     }
 
+    h4 {
+      border-bottom: solid 1px #1f325a;
+      padding-bottom: 50px;
+    }
     .heroimg {
       width: 90%;
       position: relative;
