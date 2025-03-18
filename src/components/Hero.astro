@@ -2,23 +2,85 @@
 
 ---
 
-<section class="hero-container">
-  <article class="hero-text">
-    <h1>VI HAR BRUG FOR DIG!</h1>
-    <h2>GØR EN FORSKEL</h2>
-  </article>
+<div class="bg-farve">
+  <section class="hero-container">
+    <article class="hero-text">
+      <h1>VI HAR BRUG FOR DIG!</h1>
+      <h2>GØR EN FORSKEL</h2>
+    </article>
 
-  <article class="heroimg-container">
-    <img class="heroimg" src="/heroimage.webp" alt="Heroimage" />
-  </article>
+    <article class="heroimg-container">
+      <img class="heroimg" src="/heroimage.webp" alt="Heroimage" />
+    </article>
 
-  <div class="arrow-button">
-    <img class="arrowsimg" src="/arrows.webp" alt="arrows" />
-    <button>BLIV FRIVILLIG</button>
-  </div>
+    <div class="arrow-button">
+      <img class="arrowsimg" src="/arrows.webp" alt="arrows" />
+      <button>BLIV FRIVILLIG</button>
+    </div>
+  </section>
+</div>
+
+<section class="sideto">
+  <article class="hvem-container">
+    <h3>HVEM ER VI?</h3>
+    <h4>TIL KAMP MOD <strong>HJEMLØSHED</strong>,<strong>ENSOMHED</strong> OG <strong>PSYKISK MISTRIVSEL</strong></h4>
+  </article>
+  <article class="linjeogikon">
+    <div class="lines-container">
+      <img src="/blaalinjer.webp" alt="lines-side" />
+    </div>
+
+    <div class="ikon-container">
+      <div class="haender-item">
+        <img class="ikon" src="/haenderikon.webp" alt="Haender med Hjerte" />
+      </div>
+      <div class="personer-item">
+        <img class="ikon" src="/personerikon.webp" alt="Personer" />
+      </div>
+      <div class="haender2-item">
+        <img class="ikon" src="/haender2ikon.webp" alt="Haender med Hjerte" />
+      </div>
+    </div>
+  </article>
 </section>
 
 <style>
+  .ikon-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 15px 20px;
+    position: relative;
+    top: 30px;
+  }
+
+  .ikon {
+    max-width: 200px;
+    width: 95%;
+    height: auto;
+  }
+
+  .personer-item {
+    margin: 0 auto;
+  }
+
+  .haender-item {
+    padding-left: clamp(10px, 6vw, 100px);
+  }
+
+  .haender2-item {
+    padding-right: clamp(10px, 6vw, 100px);
+  }
+  .sideto {
+    background-color: #fffcf6;
+    min-height: 100vh;
+  }
+
+  div.bg-farve {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(131, 156, 211, 0.7) 0%, rgba(255, 252, 246, 0.85) 100%);
+    min-height: 100vh;
+  }
   h1 {
     font-family: "anton", sans-serif;
     font-weight: 400;
@@ -26,6 +88,57 @@
     font-size: 6rem;
     color: white;
     letter-spacing: 3.3px;
+  }
+
+  h3 {
+    font-family: "anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+
+    color: #1f325a;
+    letter-spacing: 3.3px;
+  }
+
+  .lines-container {
+    display: flex;
+    justify-content: center; /* Centrerer billedet */
+    align-items: center;
+    max-width: 100%; /* Forhindrer for stor bredde */
+    height: auto;
+    overflow: hidden; /* Sikrer, at billedet ikke stikker udenfor */
+    margin-top: 10px;
+    position: absolute;
+  }
+
+  .lines-container img {
+    display: inline-block; /* Sørger for, at billedet kun fylder sit eget indhold */
+    width: auto; /* Undgår at billedet strækker sig */
+    max-width: 95%; /* Sørger for, at det ikke bliver større end sit indhold */
+    height: auto; /* Bevarer proportioner */
+    align-self: center;
+  }
+  h4 {
+    font-family: "Mulish", sans-serif;
+
+    font-weight: 400;
+    color: #1f325a;
+    margin-top: 50px;
+    letter-spacing: 1.08px;
+  }
+
+  .hvem-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hvem-container h3 {
+    font-size: clamp(2rem, 5vw, 4rem); /* Mindst 2rem, max 3rem */
+  }
+
+  .hvem-container h4 {
+    font-size: clamp(1rem, 1.5vw, 1.5rem); /* Mindst 1rem, max 1.3rem */
   }
 
   .arrow-button {
@@ -107,6 +220,10 @@
       margin: 0 auto;
     }
 
+    .lines-container img {
+      display: none;
+    }
+
     .heroimg-container {
       margin: 0 auto;
 
@@ -124,12 +241,12 @@
     }
 
     .heroimg {
-      width: 80%;
+      width: 100%;
       position: relative;
       margin: 0 auto;
       z-index: 1;
       right: 0; /* Sørger for, at billedet ikke ryger ud af skærmen */
-      left: 50%; /* Skubber billedet til midten */
+      left: 60%; /* Skubber billedet til midten */
       transform: translateX(-50%); /* Justerer billedet præcist til midten */
       margin-top: 20px;
       max-width: 400px;
@@ -144,8 +261,8 @@
     }
 
     button {
-      padding: 20px 40px;
-      font-size: 0.8rem;
+      padding: 30px 50px;
+      font-size: 1rem;
       margin-top: 10px;
     }
 
@@ -157,7 +274,7 @@
 
   @media (min-width: 801px) and (max-width: 1072px) {
     h1 {
-      font-size: 3.5rem;
+      font-size: 4rem;
     }
 
     h2 {
@@ -169,13 +286,14 @@
     }
 
     .heroimg {
-      width: 500px;
-      top: 50px;
+      width: 600px;
+      top: 40px;
     }
 
     button {
-      padding: 25px 35px;
+      padding: 30px 50px;
       font-size: 1rem;
+      z-index: 5;
     }
   }
 
@@ -186,12 +304,18 @@
       align-items: center;
       gap: 20px;
       margin: 0 auto;
+
+      padding-bottom: 0px;
+    }
+
+    .lines-container img {
+      display: none;
     }
 
     button {
-      padding: 25px 35px;
+      padding: 30px 50px;
       font-size: 1rem;
-      margin-top: 5px;
+      margin-top: 10px;
     }
 
     .arrowsimg {
