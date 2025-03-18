@@ -1,5 +1,6 @@
 ---
 import Navbar from "../components/Navbar.astro";
+
 const { title, activePage } = Astro.props;
 ---
 
@@ -10,9 +11,16 @@ const { title, activePage } = Astro.props;
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mulish:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="https://use.typekit.net/djj7fhm.css" />
-    <link rel="shortcut icon" type="image/x-icon" href="https://weshelter.dk/wp-content/themes/weshelter/images/favicon.ico" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://weshelter.dk/wp-content/themes/weshelter/images/favicon.ico"
+    />
     <title>{title ? `${title} | WeShelter` : "WeShelter"}</title>
   </head>
   <body>
@@ -23,9 +31,7 @@ const { title, activePage } = Astro.props;
     </main>
 
     <footer>
-      <p>Kontakt: kontakt@weshelter.dk</p>
-      <p>Adresse: Storegade 1, 2200 København N</p>
-      <p>CVR: 01010101</p>
+      <slot name="Footer" />
     </footer>
   </body>
 </html>
@@ -36,5 +42,8 @@ const { title, activePage } = Astro.props;
     margin: 0;
     width: 100%;
     height: 100%;
+  }
+  footer {
+    background-color: #1f325a;
   }
 </style>
