@@ -3,7 +3,18 @@
 ---
 
 <div class="bg-farve">
-  <h2>TILMELD DIG HER</h2>
+  <div class="header-container">
+    <div class="info-icon">
+      <span class="question-mark">?</span>
+      <div class="info-box">
+        <h3>BLIV FRIVILLIG - Gør en Forskel for Hjemløse!</h3>
+        <p>Har du lyst til at gøre noget meningsfuldt med din tid? Ved at blive frivillig hos os kan du være med til at skabe varme, håb og en bedre hverdag for hjemløse.</p>
+        <p>Uanset om du har et par timer om ugen eller en gang imellem, kan din indsats gøre en kæmpe forskel.</p>
+      </div>
+    </div>
+    <h2>TILMELD DIG HER</h2>
+  </div>
+
   <div class="form-container">
     <form action="#" method="POST">
       <div class="form-row">
@@ -15,8 +26,15 @@
 
       <select name="indsats">
         <option value="">Vælg indsats</option>
-        <option value="option1">Option 1</option>
-        <option value="option2">Option 2</option>
+        <option value="option1">Netværksvenner</option>
+        <option value="option2">Sociale Madklubber</option>
+        <option value="option3">LGBTQ+ Venner</option>
+        <option value="option4">Aktivitetsklubber</option>
+        <option value="option5">Økonomirådgivingen</option>
+        <option value="option6">Peer-to-Peer</option>
+        <option value="option7">Møbelhjælp</option>
+        <option value="option8">Yoga</option>
+        <option value="option9">Massage</option>
       </select>
 
       <div class="form-row">
@@ -39,12 +57,12 @@
 
   .form-container {
     width: 100%;
-    max-width: 800px;
+    max-width: 1000px;
     margin: auto;
     padding: 50px;
     text-align: center;
     position: relative;
-    top: 100px;
+    top: 150px;
   }
 
   h2 {
@@ -55,14 +73,83 @@
     font-style: normal;
     color: white;
     text-align: center;
-    position: relative;
-    top: 50px;
+  }
+
+  h3 {
+    font-family: "anton", sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem
+    letter-spacing: 3.3px;
+    font-style: normal;
+    color: #1f325a;
+
+  }
+
+  p {
+  
+    font-family: "Mulish", sans-serif;
+    font-weight: 400;
+    margin-top: 10px;
+    letter-spacing: 1.08px;
+
   }
 
   form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 30px;
+  }
+
+  .header-container {
+    display: flex;
+    align-items: center;
+
+    justify-content: center;
+    position: relative;
+    top: 50px;
+  }
+
+  .info-icon {
+    position: relative;
+    display: inline-block;
+  }
+
+  .question-mark {
+    background-color: #daa520;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-left: -100px;
+    font-family: "Mulish", sans-serif;
+    font-weight: 400;
+  }
+
+  .info-box {
+    display: none;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 40px;
+    width: 250px;
+    background: white;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+    color: black;
+    text-align: left;
+    z-index: 10;
+  }
+
+  .info-icon:hover .info-box {
+    display: block;
   }
 
   .form-row {
@@ -74,10 +161,19 @@
   select,
   button {
     width: 100%;
-    padding: 10px;
-    border: 1px solid #ccc;
+    padding: 15px;
+    border: 1px solid #1f325a;
     border-radius: 5px;
-    font-size: 1rem;
+  }
+
+  input:hover {
+    border: 1px solid #daa520;
+    cursor: pointer;
+  }
+
+  select:hover {
+    border: 1px solid #daa520;
+    cursor: pointer;
   }
 
   button {
@@ -86,11 +182,36 @@
     font-weight: bold;
     cursor: pointer;
     border: none;
+    max-width: 300px;
+    font-size: 1rem;
+    font-weight: 200;
+    margin: 0 auto;
+  }
+
+  button:hover {
+    background-color: #1f325a;
   }
 
   @media (max-width: 600px) {
     .form-row {
       flex-direction: column;
     }
+
+    .header-container {
+flex-direction: column-reverse;
   }
+
+  .question-mark{
+    margin-left: 0;
+    align-items: center;
+    margin-top: 50px;
+  }
+
+  .form-container {
+
+    top: 70px;
+  }
+  }
+
+
 </style>
