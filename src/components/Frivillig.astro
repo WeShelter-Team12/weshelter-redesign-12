@@ -4,6 +4,14 @@
 
 <section class="bg-farve">
   <h2>MØD EN FRIVILLIG</h2>
+  <article class="frivillig-container">
+    <img class="lisa" src="/lisa.webp" alt="Lisa" />
+    <img class="linje" src="/orangelinje.png" alt="orangelinje" />
+    <div class="lisa-text">
+      <h3>LISA</h3>
+      <p>Lisa er 42 år og er uddannet socialrådgiver. Hun hjælper hjemløse med rådgivning om bolig og økonomi og brænder for at gøre en forskel.</p>
+    </div>
+  </article>
 </section>
 
 <style>
@@ -19,10 +27,95 @@
     top: 50px;
   }
 
+  h3 {
+    font-family: "anton", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: #1f325a;
+    letter-spacing: 3.3px;
+    padding-bottom: 30px;
+    font-size: clamp(2rem, 2vw, 4rem); /* Mindst 2rem, max 3rem */
+  }
+
+  .frivillig-container {
+    display: flex;
+    gap: 50px;
+    position: relative;
+    top: 150px;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  img.lisa {
+    width: 20%;
+    height: auto;
+    object-fit: contain;
+  }
+
+  img.linje {
+    width: 1px;
+    height: auto;
+  }
+
   section.bg-farve {
     width: 100%;
     height: 100%;
     background-color: #fffcf6;
     min-height: 80vh;
+  }
+
+  p {
+    font-family: "Mulish", sans-serif;
+    font-weight: 400;
+    margin-top: 10px;
+    letter-spacing: 1.08px;
+    max-width: 600px;
+
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 900px) {
+    .frivillig-container {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      top: 100px;
+    }
+
+    img.lisa {
+      width: 30%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    img.linje {
+      transform: rotate(90deg);
+      position: absolute;
+      top: 50%;
+    }
+
+    p {
+      font-size: 1rem;
+      max-width: 500px;
+    }
+
+    h3 {
+      text-align: center;
+      position: relative;
+      top: -40px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    img.linje {
+      top: 40%;
+    }
+  }
+
+  @media (max-width: 400px) {
+    img.linje {
+      top: 30%;
+    }
   }
 </style>
