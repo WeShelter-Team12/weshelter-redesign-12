@@ -5,58 +5,17 @@
 <section class="bg-farve">
   <h2>MØD EN FRIVILLIG</h2>
 
-  <div class="frivillig-karrusel">
-    <input type="radio" name="slider" id="slide1" checked />
-    <input type="radio" name="slider" id="slide2" />
-    <input type="radio" name="slider" id="slide3" />
-
-    <div class="slides">
-      <article class="frivillig-container">
-        <img class="lisa" src="/lisa.webp" alt="Lisa" />
-        <img class="linje" src="/orangelinje.png" alt="orangelinje" />
-        <div class="lisa-text">
-          <h3>LISA</h3>
-          <p>
-            Lisa er 42 år og er uddannet socialrådgiver. Hun hjælper hjemløse
-            med rådgivning om bolig og økonomi og brænder for at gøre en
-            forskel.
-          </p>
-        </div>
-      </article>
-
-      <article class="frivillig-container">
-        <img class="lisa" src="/Miguel.webp" alt="Morten" />
-        <img class="linje" src="/orangelinje.png" alt="orangelinje" />
-        <div class="lisa-text">
-          <h3>MIGUEL</h3>
-          <p>
-            Miguel er 31 år og arbejder som kok. Hver uge laver han varme
-            hjemmelavet måltider drevet i samarbejde med WeShelter, fordi han
-            tror på fællesskabet og omsorg.
-          </p>
-        </div>
-      </article>
-
-      <article class="frivillig-container">
-        <img class="lisa" src="/Mark.webp" alt="Sara" />
-        <img class="linje" src="/orangelinje.png" alt="orangelinje" />
-        <div class="lisa-text">
-          <h3>MARK</h3>
-          <p>
-            Mark er 26 år og bruger sin fritid på at dele mad og varmt tøj ud
-            til hjemløse gennem en NGO. Han sætter pris på de personlige
-            samtaler, der kan sprede lidt håb.
-          </p>
-        </div>
-      </article>
+  <article class="frivillig-container">
+    <img class="lisa" src="/lisa.webp" alt="Lisa" />
+    <img class="linje" src="/orangelinje.png" alt="orangelinje" />
+    <div class="lisa-text">
+      <h3>LISA</h3>
+      <p>
+        Lisa er 42 år og er uddannet socialrådgiver. Hun hjælper hjemløse med
+        rådgivning om bolig og økonomi og brænder for at gøre en forskel.
+      </p>
     </div>
-
-    <div class="navigation">
-      <label for="slide1"></label>
-      <label for="slide2"></label>
-      <label for="slide3"></label>
-    </div>
-  </div>
+  </article>
 </section>
 
 <style>
@@ -86,7 +45,7 @@
     display: flex;
     gap: 50px;
     position: relative;
-    top: 30px;
+    top: 150px;
     justify-content: center;
     padding: 20px;
   }
@@ -117,50 +76,6 @@
     max-width: 600px;
 
     font-size: 1.5rem;
-  }
-  .frivillig-karrusel {
-    position: relative;
-    width: 100%;
-    max-width: 800px;
-    margin: 20px auto;
-    overflow: hidden;
-  }
-
-  .slides {
-    display: flex;
-    width: 300%;
-  }
-  #slide1:checked ~ .slides {
-    transform: translateX(0);
-  }
-  #slide2:checked ~ .slides {
-    transform: translateX(-33.33%);
-  }
-  #slide3:checked ~ .slides {
-    transform: translateX(-66.66%);
-  }
-
-  /* Navigation prikker */
-  .navigation {
-    display: flex;
-    justify-content: center;
-    margin-top: 10px;
-  }
-
-  .navigation label {
-    width: 12px;
-    height: 12px;
-    margin: 5px;
-    background: gray;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-
-  #slide1:checked ~ .navigation label[for="slide1"],
-  #slide2:checked ~ .navigation label[for="slide2"],
-  #slide3:checked ~ .navigation label[for="slide3"] {
-    background: orange;
   }
 
   @media (max-width: 900px) {
